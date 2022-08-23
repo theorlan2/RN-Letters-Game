@@ -31,10 +31,33 @@ pod install
 
 - Luego de hacer el paso anterior puede iniciar el proyecto con:
 
-```sh
 # Volver atras
+
+```
 cd ..    
+```
+
 # Ejecutar
+
+```
 npm run ios
 o
 yarn run ios
+```
+
+
+
+## Imagenes del proyecto
+
+<p align="center">
+<img src="./resources/screenshots/home.png" width="100" alt="home screenshot"  >
+</p>
+ 
+<p align="center">
+<img src="./resources/screenshots/good-select.png" width="100" alt="good select  screenshot"  >
+</p>
+ 
+<p align="center">
+<img src="./resources/screenshots/bad-select.png" width="100" alt="bad select  screenshot"  >
+</p>
+ 1
