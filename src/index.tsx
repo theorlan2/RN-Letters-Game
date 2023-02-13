@@ -1,7 +1,3 @@
-/**
- * @format
- */
-
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import {
   StatusBar,
@@ -16,7 +12,7 @@ import {
 import Board from './components/BoardGame/Board';
 import ButtonClear from './components/ButtonClear';
 import InputResult from './components/InputResult';
-import { Letters } from './types/Letters';
+import { Letters } from './models/Letters.model';
 import { generateBoardsLetters } from './utils/generateBoardLetters';
 import { formatTextFromArray, validateSelected } from './utils/validateBoardSelected';
 
@@ -55,7 +51,7 @@ const LettersGame: FunctionComponent = () => {
   function validateLetter(value: string, indexLetter: number) {
     if (!checkLetterExist(indexLetter)) {
       let isValid = false;
-      let listLetters = [...lettersSelect];
+      const listLetters = [...lettersSelect];
       if (lettersSelect.length > 0) {
         isValid = validateTileTwice(indexLetter);
       } else {

@@ -1,5 +1,5 @@
 import {board} from '../data/test-board-1.json';
-import {Letters} from '../types/Letters';
+import {Letters} from '../models/Letters.model';
 
 export function generateBoardsLetters(randomLenght: number = 16): Letters[] {
   let letters = [] as string[];

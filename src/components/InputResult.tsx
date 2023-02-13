@@ -1,19 +1,20 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Letters } from '../models/Letters.model';
 import { formatTextFromArray } from '../utils/validateBoardSelected';
 
-type InputResultProps = {
-    resultLetters: any[];
-    isValid: Boolean;
+type Props = {
+    resultLetters: Letters[];
+    isValid: boolean;
 }
 
-const InputResult: FunctionComponent<InputResultProps> = (props) => {
+const InputResult: FunctionComponent<Props> = (props) => {
 
     const [resultText, setResultText] = useState('')
 
     useEffect(() => {
         if (props.resultLetters && props.resultLetters.length > 0) {
-            let result = formatTextFromArray(props.resultLetters);
+            const result = formatTextFromArray(props.resultLetters);
             setResultText(result);
         } else {
             setResultText('');
